@@ -7,8 +7,7 @@ name: Disk-space monitor
 #    monitor gap) — a failed scheduled workflow is itself an alert, because
 #    GitHub notifies everyone who watches the repository.
 on:
-  schedule:
-    - cron: "23 6 * * *"
+  # Personal fork: do not run automated monitoring or CI; allow manual dispatch.
   workflow_dispatch:
 
 permissions:

@@ -14,8 +14,7 @@ name: Synthetic read-path monitor
 # every-2-minutes schedule on the monitor host; this workflow is the second,
 # independent network path to production.
 on:
-  schedule:
-    - cron: "*/5 * * * *"
+  # Personal fork: do not run automated monitoring or CI; allow manual dispatch.
   workflow_dispatch:
 
 permissions:

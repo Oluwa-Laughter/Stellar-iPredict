@@ -56,18 +56,7 @@ name: Status Page
 #   open http://localhost:8080
 #
 on:
-  push:
-    branches: [main, implementation-drips]
-    paths:
-      - "status-page/**"
-      - ".github/workflows/status-page.yml"
-
-  # Poll every 5 minutes so snapshot.json is never more than 5 minutes stale.
-  # Even during a full backend outage the CDN keeps serving the last snapshot.
-  schedule:
-    - cron: "*/5 * * * *"
-
-  # Allow manually triggering a deploy (e.g. right after resolving an incident).
+  # Personal fork: do not run automated monitoring or CI; allow manual dispatch.
   workflow_dispatch:
 
 permissions:

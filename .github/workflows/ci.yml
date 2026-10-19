@@ -1,13 +1,8 @@
 name: iPredict CI
 
 on:
-  push:
-    branches: [main, develop, implementation-drips]
-  pull_request:
-    branches: ['*']
-  schedule:
-    - cron: '0 2 * * *'
-
+  # Personal fork: do not run automated monitoring or CI; allow manual dispatch.
+  workflow_dispatch: {}
 permissions:
   contents: read
   actions: read
